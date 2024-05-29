@@ -1,0 +1,39 @@
+<!-- Ngform allows us to send a bunch of values directly -->
+<!-- Template form -->
+<form #emailForm="ngForm" (ngSubmit)="onSubmitForm(emailForm)">
+  <h2>Template form</h2>
+  <label for="emailInput">Inscrivez-vous pour recevoir notre newsletter !</label>
+  <!-- here we use [ and ( because we have a two way binding with NgModel
+  the value will be affected from the ts and the value from the html will change the value in the typescript
+  -->
+  <input id="emailInput" name="userEmail" type="email" [(ngModel)]="userEmail">
+  <button type="submit">OK!</button>
+</form>
+
+<!-- Reactive form -->
+<div class="form-card">
+  <h2>Reactive form</h2>
+  <form [formGroup]="snapForm">
+    <div class="form-group">
+      <label for="title">Titre</label>
+      <input id="title" type="text" formControlName="title">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" type="text" formControlName="description" rows="4">
+        </textarea>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">URL de l'image</label>
+      <input id="imageUrl" type="text" formControlName="imageUrl">
+    </div>
+    <div class="form-group">
+      <label for="location">Lieu</label>
+      <input id="location" type="text" formControlName="location">
+    </div>
+    <div class="action-buttons">
+      <!-- if the form is invalid (required fields are not entered), then we can't submit -->
+      <button type="submit" (click)="onSubmitReactiveForm()" [disabled]="snapForm.invalid">Enregistrer</button>
+    </div>
+  </form>
+</div>

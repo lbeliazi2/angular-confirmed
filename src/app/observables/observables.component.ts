@@ -4,10 +4,10 @@ import {concatMap, delay, exhaustMap, filter, map, mergeMap, switchMap, take, ta
 
 @Component({
   selector: 'face-snap-list',
-  templateUrl: './face-snap-list.component.html',
-  styleUrls: ['./face-snap-list.component.scss']
+  templateUrl: './observables.component.html',
+  styleUrls: ['./observables.component.scss']
 })
-export class FaceSnapListComponent implements OnInit, OnDestroy {
+export class ObservablesComponent implements OnInit, OnDestroy {
 
   // we can also instead of subscribing use the pipe async on the observable
   // to see the results

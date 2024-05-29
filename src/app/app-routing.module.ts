@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ObservablesComponent } from './observables/observables.component';
+import { FormsComponent } from './forms/forms.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
 
 const routes: Routes = [
   { path: 'facesnaps/:id', component: SingleFaceSnapComponent },
-  { path: 'observables', component: FaceSnapListComponent },
-  { path: 'forms', component: LandingPageComponent }
+  { path: 'observables', component: ObservablesComponent },
+  { path: 'forms', component: FormsComponent }
 ];
 
 @NgModule({

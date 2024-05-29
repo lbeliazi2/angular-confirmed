@@ -5,26 +5,27 @@ import * as fr from '@angular/common/locales/fr';
 
 import { AppComponent } from './app.component';
 import { FaceSnapComponent } from './face-snap/face-snap.component';
-import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
+import { ObservablesComponent } from './observables/observables.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FormsComponent } from './forms/forms.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     FaceSnapComponent,
-    FaceSnapListComponent,
+    ObservablesComponent,
     HeaderComponent,
-    LandingPageComponent,
+    FormsComponent,
     SingleFaceSnapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }
