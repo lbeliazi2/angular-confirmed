@@ -6,8 +6,8 @@ import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.com
 
 const routes: Routes = [
   { path: 'facesnaps/:id', component: SingleFaceSnapComponent },
-  { path: 'facesnaps', component: FaceSnapListComponent },
-  { path: '', component: LandingPageComponent }
+  { path: 'observables', component: FaceSnapListComponent },
+  { path: 'forms', component: LandingPageComponent }
 ];
 
 @NgModule({

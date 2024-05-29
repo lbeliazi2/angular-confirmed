@@ -8,13 +8,15 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
 
+  userEmail: string = "Value written from the typescript";
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onContinue(): void {
-    this.router.navigateByUrl('facesnaps');
+  onSubmitForm() {
+    console.log(this.userEmail);
   }
+
 
 }
