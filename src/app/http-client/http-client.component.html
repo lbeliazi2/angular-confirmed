@@ -1,0 +1,9 @@
+<div>
+  <h1>Call to get the list of face snaps:</h1>
+  <ul>
+    <!-- the async subscribe to the observable, sends the request which emits the reponse and ngFor gets the data -->
+    <div *ngFor="let faceSnap of faceSnap$ | async">
+      <li>{{faceSnap.title}}</li>
+    </div>
+  </ul>
+</div>
